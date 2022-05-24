@@ -85,8 +85,8 @@ func TestEvict(t *testing.T) {
 		lru.Add(fmt.Sprintf("myKey%d", i), 1234)
 	}
 
-	if len(evictedKeys) != 2 {
-		t.Fatalf("got %d evicted keys; want 2", len(evictedKeys))
+	if len(evictedKeys) != 22 {
+		t.Fatalf("got %d evicted keys; want 22", len(evictedKeys))
 	}
 	if evictedKeys[0] != Key("myKey0") {
 		t.Fatalf("got %v in first evicted key; want %s", evictedKeys[0], "myKey0")
